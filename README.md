@@ -2,22 +2,22 @@
 
 A simple Python script that generates **UK-style vehicle registration plates** (post-2001 format) based on user input such as registration year, month, and area.
 
-This project is intended as a **basic practice script** for input handling, validation, and random generation.
+This project was created as a **basic practice script** to experiment with conditional logic, input validation, and constrained random generation.
 
 ---
 
 ## Features
 
 - Generates UK-style registration plates (2001 onwards)
-- User inputs:
+- Interactive command-line input for:
   - Registration year
   - Registration month
   - Registration area (limited set)
 - Randomly generates plate letters while:
   - Excluding invalid characters (`I`, `Q`, `Z`)
-  - Filtering out offensive letter combinations
-- Automatically calculates correct year codes
-- Simple command-line interface
+  - Filtering out predefined offensive letter combinations
+- Automatically calculates correct year codes based on UK plate rules
+- Single-file, standalone script
 
 ---
 
@@ -30,7 +30,6 @@ Enter the area where your car was registered (E.G; London): London
 Your generated registration plate is: AL18 XYZ
 Thank you for using the registration plate generator!
 
-
 ---
 
 ## How It Works
@@ -39,19 +38,21 @@ UK registration plates follow the format:
 
 AA## AAA
 
-- **First letter**: Registration area
+- **First letter**: Registration area (simplified mapping)
 - **Second letter**: Random letter (excluding I, Q, Z)
-- **Two digits**: Year code
-  - March–August → last two digits of year
-  - September–February → last two digits + 50
-- **Last three letters**: Random letters with filters applied
+- **Two digits**: Year code  
+  - March–August → last two digits of year  
+  - September–February → last two digits + 50  
+- **Last three letters**: Random letters with filters applied  
+
+All logic is contained within a single Python file and runs sequentially.
 
 ---
 
 ## Requirements
 
 - Python 3.x  
-- No external libraries required
+- Standard library only (`random`, `string`)
 
 ---
 
@@ -62,45 +63,21 @@ AA## AAA
    git clone https://github.com/your-username/Basic-reg-generator.git
 
 2. Navigate to the project folder:
-  cd Basic-reg-generator
+   cd Basic-reg-generator
 3. Run the script:
-  python registration.py
+   python Registration.py
 
----
 
 ## Limitations
 
----
-
-Area codes are limited to a small predefined list
-
-No persistence or file output
-
-Admin functionality is not implemented
-
-Plate generation is simplified and not fully DVLA-accurate
-
-## Future Improvements
+- Implemented as a **single-file, procedural script**
+- Registration areas are limited to a small predefined list
+- Plate generation logic is simplified and not fully DVLA-accurate
+- No persistence, configuration files, or reusable functions
+- Designed for interactive CLI use only
 
 ---
 
-Expand area code coverage
+## Disclaimer
 
-Refactor logic into functions
-
-Add proper admin/customisation features
-
-Add automated tests
-
-Improve validation and structure
-
-## Disclaimer
-
-This project is for educational purposes only and does not generate real or officially registered vehicle plates.
-
-
-## Speed / curiosity project, took me 2 hours (Week 3, Foundation Year)
-
-
-
-
+This project is for **educational purposes only** and does not generate real or officially registered vehicle registration plates.
