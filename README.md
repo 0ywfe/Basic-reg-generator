@@ -66,7 +66,9 @@ AA## AAA
 3. Run the script:
   python registration.py
 
-## Limitations
+---
+
+## Limitations
 
 ---
 
