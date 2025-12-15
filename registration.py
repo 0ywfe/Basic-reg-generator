@@ -11,7 +11,7 @@ three_letters = random.choices(string.ascii_uppercase, k=3)
 while "I" in three_letters or "Q" in three_letters or "Z" in three_letters:
     three_letters = random.choices(string.ascii_uppercase, k=3)
 
-while ''.join(three_letters) in ["FUC", "SEX", "CUM", "FUK", "FCK", "DAM", "GOD", "PIS", "PRN", "PNT"]: # these are haram innit :DDDDDDD🤣
+while ''.join(three_letters) in ["FUC", "SEX", "CUM", "FUK", "FCK", "DAM", "GOD", "PIS", "PRN", "PNT"]:
     three_letters = random.choices(string.ascii_uppercase, k=3)
 
 three_letters = ''.join(three_letters)
@@ -69,9 +69,3 @@ reg_plate += " " + three_letters
 
 print("Your generated registration plate is: " + reg_plate)
 print("Thank you for using the registration plate generator!")
-
-passcode = str(input).lower()
-if passcode == "admin123":
-    print("Access granted. Welcome, Admin!")
-
-## i will add admin customization features later ##
